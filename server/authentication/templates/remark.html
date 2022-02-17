@@ -1,0 +1,33 @@
+<html>
+	<head>
+		{% load static %}
+		<script type='text/javascript' src="{% static './javas/jquerymin.js' %}"></script>
+		<link type="text/css" rel='stylesheet' href="{% static 'remark.css' %}">
+	</head>
+	<body>
+		<div class='fd'></div>
+		<div class='cover'></div>
+		<div id='remark_area'>
+			<div class='rmrk'>
+				<form action="" method="POST">
+				{% csrf_token %}
+				<h2>Add remark to this lead</h2>
+				<p class='x'>X</p>
+				<input type='text' name='put_remark' placeholder='Add your remarks here'/>
+				<button type='submit' name='remark_button'>Save and exit</button>
+				</form>
+			</div>
+			
+		</div>
+		<script type='text/javascript'>
+			$('.fd').click(function(){
+				$('.cover').fadeIn();
+				$('#remark_area').fadeIn();
+			})
+			$('.x').click(function(){
+				$('.cover').fadeOut();
+				$('#remark_area').fadeOut();
+			})
+		</script>
+	</body>
+</html>
