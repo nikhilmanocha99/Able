@@ -2,22 +2,28 @@
 	<head>
 		{% load static %}
 		<link rel="stylesheet" href="{% static 'dash.css' %}">
+		<!-- <link rel="stylesheet" href="{% static 'querry.css' %}"> -->
+
 	</head>
 	<body>
+		
 		<div class='main'>
-			CUVETTE
+		<img src="{% static './img/logo.png' %}" alt='' class='cuv'>
 			<div class='left'>
 				<h1>Welcome to your Dashboard</h1>
 				<br>
 				<p>This is the homepage of lead management system, login now to begin</p>
-				<img src="" alt="logo" class='img'>
+				<img src="{% static './img/one.png' %}" alt="logo" class='img'>
 			</div>
 			<div class='right'>
 				<form action="" method="POST">
+				{% csrf_token %}
 					<h2>Login to your account</h2>
-					<input name='email_address' type='email' placeholder='Enter email address'>
-					<input name='password' type='password' placeholder='password'>
+					
+					<input name='email_address' type='{{ form.usr }}' placeholder='Enter email address'>
+					<input name='password' type='{{ form.pswrd }}' placeholder='password'>
 					<button type="submit" name="submit">Login now</button>
+					<a href="#"><center> Forget passwrod</center></a>
 				</form>
 			</div>
 		</div>
