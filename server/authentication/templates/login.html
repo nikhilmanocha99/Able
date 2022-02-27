@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		
-		<div class='main'>
+		<div class='main'><hr width='100%;'>
 		<img src="{% static './img/logo.png' %}" alt='' class='cuv'>
 			<div class='left'>
 				<h1>Welcome to your Dashboard</h1>
@@ -16,15 +16,17 @@
 				<img src="{% static './img/one.png' %}" alt="logo" class='img'>
 			</div>
 			<div class='right'>
-				<form action="" method="POST">
+				<form action="" method="POST" name='myform'>
 				{% csrf_token %}
 					<h2>Login to your account</h2>
 					
-					<input name='email_address' type='{{ form.usr }}' placeholder='Enter email address'>
-					<input name='password' type='{{ form.pswrd }}' placeholder='password'>
-					<button type="submit" name="submit">Login now</button>
-					<a href="#"><center> Forget passwrod</center></a>
+					<input name='email_address' type='email' placeholder='Enter email address'>
+					<input name='password' type='password' placeholder='password'>
+					<button type="submit" name="submit" class='lgin'>Login now</button>
+					<a href="#" class='forget'><center> Forget password</center></a>
+					<a href="register" class='register'><center>Sign up/Register</center></a>
 				</form>
+				<hr>
 			</div>
 		</div>
 	</body>

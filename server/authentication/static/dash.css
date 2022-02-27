@@ -67,7 +67,7 @@ input{
 	border:1px solid #DFE0E0;
 	border-radius:5px;
 }
-button{
+.lgin{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -82,10 +82,23 @@ button{
 	border:1px solid #DFE0E0;
 	border-radius: 5px;
 }
-a{
+.register{
+	position:absolute;
+	left:11.6%;
+	text-decoration:none;
+	padding:8px 16px;
+	width:66%;
+	font-size:14px;
+	color:black;
+	border:1px solid #007BFF;
+	border-radius:5px;
+	background:#007BFF;
+	top:77%;
+}
+.forget{
 	position:absolute;
 	left:36.6%;
-	top:80%;
+	top:90%;
 }
 .right{
 	position:absolute;
